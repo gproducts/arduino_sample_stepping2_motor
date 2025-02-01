@@ -82,7 +82,7 @@ void setup() {
   // -------------------------------------------------
   // MUST KEEP OTA CODE
   WiFi.mode(WIFI_AP_STA);
-  WiFi.softAPConfig(ip, ip, IPAddress(255, 255, 255, 0));
+  WiFi.softAPConfig(ip, ip, subnet);
   WiFi.softAP(ssid, pass);
   IPAddress address = WiFi.softAPIP();
   Serial.println(address);
